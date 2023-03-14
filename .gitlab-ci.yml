@@ -14,4 +14,4 @@ deploy_dev:
     - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
-    - ssh root@..... -p22 -o "StrictHostKeyChecking=no" -tt "cd /var/www/projects/shopify-app/qr-code && git pull origin master && sh rebuild.sh $SHOPIFY_API_KEY $SHOPIFY_API_SECRET"
+    - ssh root@1.1.1.1 -p22 -o "StrictHostKeyChecking=no" -tt "cd /var/www/projects/shopify-app/qr-code && git pull origin master && sh rebuild.sh $SHOPIFY_API_KEY $SHOPIFY_API_SECRET $SHOPIFY_HOST"
